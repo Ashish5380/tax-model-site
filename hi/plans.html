@@ -1,7 +1,16 @@
 
 <!doctype html><html lang="hi"><head><meta charset="utf-8"><title>प्लान — टैक्स-मॉडल पायलट</title>
 <style>
-:root { --ok:#0a7d33; --warn:#a15c00; --info:#555; --oos:#7a4ea3; }
+:root { --ok:#0a7d33; --warn:#a15c00; --info:#555; --oos:#7a4ea3; --accent:#12459c; }
+.nav { max-width:980px; margin:0 auto; padding:0 1rem; display:flex; gap:2px; align-items:center; background:#fff;
+       border-bottom:1px solid #dfe3e8; position:sticky; top:0; z-index:10; flex-wrap:wrap; }
+.nav .brand { font-weight:700; margin-right:12px; text-decoration:none; color:#1c2430; padding:10px 2px; }
+.nav a.tab { color:#66707d; text-decoration:none; padding:12px 10px; font-size:14px; border-bottom:2px solid transparent; }
+.nav a.tab:hover { color:#1c2430; }
+.nav a.tab.active { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+.nav .lang { margin-left:auto; font-size:13px; }
+.nav .lang a { color:var(--accent); text-decoration:none; padding:12px 6px; }
+.nav .lang a b { padding:2px 8px; background:#eef2fb; border-radius:99px; }
 * { box-sizing: border-box; }
 body { font: 15px/1.55 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
        color:#1c2430; background:#f5f6f8; margin:0; }
@@ -65,8 +74,21 @@ td.mono, code { font-family: ui-monospace, Menlo, monospace; font-size:13px; }
   table { border:1px solid #999; }
   th, td { border-bottom:1px solid #bbb; }
 }
-</style></head><body><main>
-<p class="crumbs"><a href="index.html">होम</a> · प्लान · <a href="plans.html">English</a></p>
+</style></head><body>
+<nav class="nav noprint">
+  <a class="brand" href="index.html">टैक्स-मॉडल</a>
+  <a class="tab" data-tab="verify" href="verify.html">जाँच</a>
+  <a class="tab" data-tab="plans" href="plans.html">प्लान</a>
+  <a class="tab" data-tab="accuracy" href="accuracy-index.html">एक्यूरेसी इंडेक्स</a>
+  <a class="tab" data-tab="trust" href="trust.html">ट्रस्ट</a>
+  <span class="lang"><a href="../index.html"><b>English</b></a></span>
+</nav>
+<script>
+(function(){var p=location.pathname;var k=p.indexOf("accuracy-index")>=0?"accuracy":p.indexOf("plans")>=0?"plans":p.indexOf("trust")>=0?"trust":"verify";var e=document.querySelector("[data-tab=\""+k+"\"]");if(e)e.classList.add("active");})();
+</script>
+
+<main>
+<p class="crumbs"><a href="index.html">होम</a> · प्लान · <a href="../plans.html">English</a></p>
 <h1>प्लान</h1>
 <p class="sub">सरल मासिक दरें। हर प्लान में: पूरी रसीदें, वन-क्लिक फ़िक्स, प्रिंट-योग्य PDF — वही इंजन, वही टेबल। दैनिक काउंटर रात 12 बजे IST रीसेट।</p>
 <div class="plan-grid">
@@ -78,7 +100,7 @@ td.mono, code { font-family: ui-monospace, Menlo, monospace; font-size:13px; }
       <li>पूरी रसीद + फ़िक्स</li>
       <li>कोई साइनअप नहीं — ड्राफ्ट भेजिए</li>
     </ul>
-    <a class="btn secondary" href="verify.html">अभी शुरू करें</a>
+    <a class="btn secondary" href="../verify.html">अभी शुरू करें</a>
   </div>
   <div class="plan-card tout">
     <h2>प्रैक्टिशनर</h2><p class="price">₹999<small>/माह</small></p>
@@ -89,7 +111,7 @@ td.mono, code { font-family: ui-monospace, Menlo, monospace; font-size:13px; }
       <li>हिन्दी ड्राफ्ट समर्थित</li>
     </ul>
     <p class="upline">WhatsApp पर UPGRADE रिप्लाई करें — चैट में ही एक UPI भुगतान, तुरंत चालू। आपकी जाँचें सही रहती हैं।</p>
-    <a class="btn" href="verify.html">निःशुल्क आज़माएँ, चैट में अपग्रेड</a>
+    <a class="btn" href="../verify.html">निःशुल्क आज़माएँ, चैट में अपग्रेड</a>
   </div>
   <div class="plan-card">
     <h2>फर्म</h2><p class="price">₹4,999<small>/माह</small></p>
@@ -100,7 +122,7 @@ td.mono, code { font-family: ui-monospace, Menlo, monospace; font-size:13px; }
       <li>प्राथमिकता वाले इंजन अपडेट</li>
     </ul>
     <p class="upline">फर्म के लिए WhatsApp पर पूछें (वही चैट) — सीटें और UPI लिंक वहीं मिलेगी।</p>
-    <a class="btn secondary" href="verify.html">पहले निःशुल्क आज़माएँ</a>
+    <a class="btn secondary" href="../verify.html">पहले निःशुल्क आज़माएँ</a>
   </div>
 </div>
 <p class="hint">सब कुछ WhatsApp पर — चैट में रिप्लाई, चैट में ही आने वाला UPI लिंक। कोई फॉर्म नहीं, कोई कार्ड नहीं।</p>

@@ -1,7 +1,16 @@
 
 <!doctype html><html lang="hi"><head><meta charset="utf-8"><title>टैक्स-मॉडल — AI लिखे टैक्स जवाबों की जाँच</title>
 <style>
-:root { --ok:#0a7d33; --warn:#a15c00; --info:#555; --oos:#7a4ea3; }
+:root { --ok:#0a7d33; --warn:#a15c00; --info:#555; --oos:#7a4ea3; --accent:#12459c; }
+.nav { max-width:980px; margin:0 auto; padding:0 1rem; display:flex; gap:2px; align-items:center; background:#fff;
+       border-bottom:1px solid #dfe3e8; position:sticky; top:0; z-index:10; flex-wrap:wrap; }
+.nav .brand { font-weight:700; margin-right:12px; text-decoration:none; color:#1c2430; padding:10px 2px; }
+.nav a.tab { color:#66707d; text-decoration:none; padding:12px 10px; font-size:14px; border-bottom:2px solid transparent; }
+.nav a.tab:hover { color:#1c2430; }
+.nav a.tab.active { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+.nav .lang { margin-left:auto; font-size:13px; }
+.nav .lang a { color:var(--accent); text-decoration:none; padding:12px 6px; }
+.nav .lang a b { padding:2px 8px; background:#eef2fb; border-radius:99px; }
 * { box-sizing: border-box; }
 body { font: 15px/1.55 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
        color:#1c2430; background:#f5f6f8; margin:0; }
@@ -65,9 +74,22 @@ td.mono, code { font-family: ui-monospace, Menlo, monospace; font-size:13px; }
   table { border:1px solid #999; }
   th, td { border-bottom:1px solid #bbb; }
 }
-</style></head><body><main>
+</style></head><body>
+<nav class="nav noprint">
+  <a class="brand" href="index.html">टैक्स-मॉडल</a>
+  <a class="tab" data-tab="verify" href="verify.html">जाँच</a>
+  <a class="tab" data-tab="plans" href="plans.html">प्लान</a>
+  <a class="tab" data-tab="accuracy" href="accuracy-index.html">एक्यूरेसी इंडेक्स</a>
+  <a class="tab" data-tab="trust" href="trust.html">ट्रस्ट</a>
+  <span class="lang"><a href="../index.html"><b>English</b></a></span>
+</nav>
+<script>
+(function(){var p=location.pathname;var k=p.indexOf("accuracy-index")>=0?"accuracy":p.indexOf("plans")>=0?"plans":p.indexOf("trust")>=0?"trust":"verify";var e=document.querySelector("[data-tab=\""+k+"\"]");if(e)e.classList.add("active");})();
+</script>
+
+<main>
 <div class="metric-row noprint">
-  <span><a href="index.html"><b>English</b></a></span>
+  <span><a href="../index.html"><b>English</b></a></span>
   <span><span class="pill">पायलट</span> TDS सत्यापन, आयकर अधिनियम 1961→2025</span>
 </div>
 <h1>AI अब टैक्स जवाब लिखता है। कोई जाँचता नहीं। हम जाँचते हैं।</h1>
@@ -78,9 +100,9 @@ td.mono, code { font-family: ui-monospace, Menlo, monospace; font-size:13px; }
 </div>
 <div class="how">
   <div><b>1 · WhatsApp पर (सबसे आसान)</b>पायलट नंबर पर <code>VERIFY</code> + अपना ड्राफ्ट भेजें। हर कथा की एक लाइन मिलती है — पहले समस्याएँ, सुझावे फ़िक्स सहित। रोज़ 5 निःशुल्क जाँचें, रात 12 बजे IST रीसेट।</div>
-  <div><b>2 · वेब पर (पूरी रसीद)</b><a href="verify.html">ड्राफ्ट पेस्ट या अपलोड करें</a> — .docx/.pdf चलता है — और वन-क्लिक फ़िक्स व प्रिंट-योग्य PDF वाली पूरी रसीद पाएँ।</div>
-  <div><b>3 · पहले हमें जाँचें</b><a href="trust.html">लाइव ट्रस्ट पेज</a> देखें (घटना-काउंटर 0 पढ़ना चाहिए) और <a href="accuracy-index.html">एक्यूरेसी इंडेक्स</a>: सार्वजनिक AI औज़ार बंद प्रश्न-बैंक पर कैसे खड़े होते हैं। जाँचकर्ता को उसके रिकॉर्ड से परखें।</div>
+  <div><b>2 · वेब पर (पूरी रसीद)</b><a href="../verify.html">ड्राफ्ट पेस्ट या अपलोड करें</a> — .docx/.pdf चलता है — और वन-क्लिक फ़िक्स व प्रिंट-योग्य PDF वाली पूरी रसीद पाएँ।</div>
+  <div><b>3 · पहले हमें जाँचें</b><a href="../trust.html">लाइव ट्रस्ट पेज</a> देखें (घटना-काउंटर 0 पढ़ना चाहिए) और <a href="accuracy-index.html">एक्यूरेसी इंडेक्स</a>: सार्वजनिक AI औज़ार बंद प्रश्न-बैंक पर कैसे खड़े होते हैं। जाँचकर्ता को उसके रिकॉर्ड से परखें।</div>
 </div>
-<p><a class="btn" href="verify.html">अभी ड्राफ्ट जाँचें — निःशुल्क</a> <a class="btn secondary" href="plans.html">प्लान व दरें</a></p>
+<p><a class="btn" href="../verify.html">अभी ड्राफ्ट जाँचें — निःशुल्क</a> <a class="btn secondary" href="plans.html">प्लान व दरें</a></p>
 <p class="hint">भारतीय CA डिज़ाइन-पार्टनर के साथ बना · रसीदों में सबूत दिखता है, राय को राय ही लिखा जाता है · फाइलिंग से पहले CA समीक्षा ज़रूरी · यह कानूनी सलाह नहीं है।</p>
 </main></body></html>
